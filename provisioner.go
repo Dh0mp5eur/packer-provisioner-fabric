@@ -270,7 +270,7 @@ func (p *Provisioner) executeFabric(ui packer.Ui, comm packer.Communicator, priv
 	}
 	args = append(args, p.config.ExtraArguments...)
 
-	for _,task := range strings.Split(p.config.FabTasks, ",") {
+	for _,task := range strings.Split(p.config.FabTasks, ";") {
 	        args = append(args, task)
 	}
 
